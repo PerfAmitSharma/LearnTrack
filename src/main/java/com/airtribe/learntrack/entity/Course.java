@@ -68,4 +68,3 @@ public class Course {
                 ", Active: " + active;
     }
 }
-

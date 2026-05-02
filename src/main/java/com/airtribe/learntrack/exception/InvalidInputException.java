@@ -5,4 +5,3 @@ public class InvalidInputException extends RuntimeException {
         super(message);
     }
 }
-

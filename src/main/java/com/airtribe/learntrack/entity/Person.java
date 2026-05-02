@@ -14,7 +14,6 @@ public class Person {
         this.email = email;
     }
 
-    // Getters & Setters
     public int getId() {
         return id;
     }
@@ -43,7 +42,6 @@ public class Person {
         this.email = email;
     }
 
-    // Common method for polymorphism
     public String getDisplayName() {
         return firstName + " " + lastName;
     }

@@ -49,4 +49,3 @@ public class CourseService {
         return !courses.isEmpty();
     }
 }
-

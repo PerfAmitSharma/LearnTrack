@@ -69,4 +69,3 @@ public class Enrollment {
                 ", Status: " + status;
     }
 }
-

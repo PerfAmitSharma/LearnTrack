@@ -17,7 +17,6 @@ public class Student extends Person {
         this.active = true;
     }
 
-    // Constructor Overloading
     public Student(int id, String firstName, String lastName, String email, String batch, boolean active) {
         super(id, firstName, lastName, email);
         this.batch = batch;

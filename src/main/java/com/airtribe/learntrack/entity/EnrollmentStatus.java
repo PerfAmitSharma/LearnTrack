@@ -5,4 +5,3 @@ public enum EnrollmentStatus {
     COMPLETED,
     CANCELLED
 }
-
