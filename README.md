@@ -8,7 +8,7 @@
 
 ## Class diagram
 
-Relationships: **inheritance** (`Person` → `Student` / `Trainer`), **composition** (`Enrollment` → `EnrollmentStatus`), **services** (`EnrollmentService` uses `StudentService` and `CourseService`), **UI** (`Main` calls the three services).
+Relationships between main types: **inheritance** (`Person` → `Student` / `Trainer`), **composition** (`Enrollment` uses `EnrollmentStatus`), **service dependencies** (`EnrollmentService` uses `StudentService` and `CourseService`), and **UI** (`Main` calls the three services).
 
 ```mermaid
 classDiagram
@@ -76,7 +76,7 @@ classDiagram
     class EnrollmentService
 ```
 
-*(View this file on GitHub or an IDE that renders Mermaid.)*
+*(If your viewer does not render Mermaid, open this file on GitHub or use an IDE/plugin that supports Mermaid.)*
 
 ---
 
@@ -84,16 +84,14 @@ classDiagram
 
 **Requirement:** JDK 17+ (`java -version`).
 
-- **Gradle:** `.\gradlew.bat run` (Windows) or `./gradlew run` after generating the wrapper (see below).
-- **IntelliJ:** Open the project → run `src/main/java/com/airtribe/learntrack/ui/Main.java` → `main`.
+- **Gradle:** `.\gradlew.bat run` (Windows) or `./gradlew run`
+- **IntelliJ:** Open the project → open `src/main/java/com/airtribe/learntrack/ui/Main.java` → run `main`
 - **Manual (PowerShell):**
 
 ```powershell
 javac -d out -encoding UTF-8 (Get-ChildItem -Path src/main/java -Recurse -Filter *.java | ForEach-Object { $_.FullName })
 java -cp out com.airtribe.learntrack.ui.Main
 ```
-
-If `gradlew.bat` is missing, from the project root run **`gradle wrapper`** (Gradle installed), or use the manual `javac` / `java` lines above.
 
 ---
 
@@ -105,20 +103,12 @@ If `gradlew.bat` is missing, from the project root run **`gradle wrapper`** (Gra
 
 ## Submission
 
-1. **Public** GitHub repository (Settings → visibility → **Public**).
-2. Submit as a **Pull Request**; provide **both** the **repository URL** and the **PR URL**.
-3. If `main` is intentionally minimal and the full app lives on branch `US01_AssignmentSubmissionLearnTrack`, open the PR **from that branch into `main`** so reviewers see the full diff.
+Per assignment guidelines:
 
-Replace placeholders with your real links:
+1. Host the project in a **public** GitHub repository (Settings → General → Danger Zone: ensure it is not private).
+2. Submit your work as a **Pull Request** (PR) from a feature branch into `main` (or as instructed by your coach).
+3. Turn in **both** links:
+   - **Repository:** `https://github.com/<your-username>/<your-repo>`
+   - **Pull Request:** `https://github.com/<your-username>/<your-repo>/pull/<number>`
 
-- Repository: `https://github.com/YourUsername/LearnTrack`
-- Pull request: `https://github.com/YourUsername/LearnTrack/pull/1`
-
----
-
-## What went wrong in the editor (important)
-
-- **README must be plain Markdown.** Do not paste terminal commands like `Set-Content ...` into `README.md`; run those only in **PowerShell**.
-- **Git commands** must be run in the **project root** where the `.git` folder lives:  
-  `D:\Amit Data\D Drive\Project\LearnTrack`  
-  If you see `fatal: not a git repository`, `cd` to that folder first, then run `git status`.
+Replace the placeholders above with your real URLs when you submit.
